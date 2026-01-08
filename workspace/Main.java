@@ -17,6 +17,7 @@ public class Main
   private ImageIcon img;
   private JLabel imageLabel;
   private JLabel outputLabel;
+  private JTextArea userInput;
   
   public static void main(String[] args) {
     // Create the GUI
@@ -97,8 +98,10 @@ public Main() {
         imageLabel = new JLabel(img);
         // and one for output
         outputLabel = new JLabel();
+        userInput = new JTextArea(1, 40);
         jFrame.add(imageLabel);
         jFrame.add(outputLabel);
+        jFrame.add(userInput);
         jFrame.setVisible(true);
         // add event listener for button click
         reviewButton.addActionListener(new ActionListener() {
